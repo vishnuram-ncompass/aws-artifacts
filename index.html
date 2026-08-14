@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Static Site</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e5e7;
+            padding: 20px 0;
+        }
+
+        nav {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1d1d1f;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        .hero {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #6e6e73;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background: #5568d3;
+        }
+
+        .features {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .feature p {
+            color: #6e6e73;
+            font-size: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #6e6e73;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MySite</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Welcome to My Site</h1>
+        <p>A simple, fast static page ready to be hosted on CloudFront.</p>
+        <a href="#about" class="btn">Learn More</a>
+    </section>
+
+    <section class="features" id="about">
+        <div class="feature">
+            <h3>Fast</h3>
+            <p>Served from edge locations close to your visitors for low latency.</p>
+        </div>
+        <div class="feature">
+            <h3>Simple</h3>
+            <p>Just plain HTML and CSS — no build tools or frameworks needed.</p>
+        </div>
+        <div class="feature">
+            <h3>Scalable</h3>
+            <p>CloudFront handles traffic spikes automatically.</p>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2026 MySite. All rights reserved.</p>
+    </footer>
+</body>
+</html>
